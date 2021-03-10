@@ -1,0 +1,27 @@
+include s-nav
+
+nav.navigation
+  a.logo(href="#")
+    img(src=require('img/logo.png'), alt="logo")
+  +s-nav([
+    {
+      name: 'Home',
+      link: '#',
+      marker: 'fas fa-home',
+    },
+    {
+      name: 'About Us',
+      link: '#',
+      marker: 'fas fa-user',
+    },
+    {
+      name: 'Services',
+      link: '#',
+      marker: 'fas fa-cog',
+    },
+    {
+      name: 'Contact Us',
+      link: '#',
+      marker: 'fas fa-envelope',
+    },
+  ])

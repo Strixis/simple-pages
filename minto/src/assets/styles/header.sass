@@ -1,0 +1,35 @@
+@use './m-fonts'
+@use './m-variables'
+
+.header
+  padding: m-variables.$padding
+  padding-top: 39px
+  box-sizing: border-box
+  background: white url(~img/bgheader.jpg) repeat-x
+  background-size: auto 100%
+
+.navigation
+  display: flex
+  align-items: center
+  box-sizing: border-box
+
+.s-nav
+  display: flex
+  margin: 0 0 0 auto
+  &_link
+    display: flex
+    align-items: center
+    font-family: m-fonts.$main
+    font-size: 19px
+    font-weight: normal
+    font-style: normal
+    line-height: normal
+    letter-spacing: normal
+    color: #545454
+    text-decoration: none
+    margin: 0 69px 0 0
+    &:last-child
+      margin: 0
+  &_marker
+    color: #a292b3
+    margin: 0 7px 0 0
