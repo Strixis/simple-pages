@@ -1,0 +1,25 @@
+include s-slider
+mixin slide(slide)
+  .slide
+    h2.slide_heading= slide.heading
+    p.slide_text= slide.text
+
+
+-
+  let slides = [
+    {
+      heading: 'Slide 1',
+      text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, reprehenderit!',
+    },
+    {
+      heading: 'Slide 2',
+      text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique reiciendis est aut id, et rem.',
+    },
+    {
+      heading: 'Slide 3',
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae totam quia.',
+    },
+  ]
++slider
+  each slide in slides
+    +slide(slide)
