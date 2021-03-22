@@ -4,6 +4,7 @@
 .header
   padding: m-variables.$padding
   padding-top: 39px
+  padding-bottom: 29px
   box-sizing: border-box
   background: white url(~img/bgheader.jpg) repeat-x
   background-size: auto 100%
@@ -20,6 +21,7 @@
     display: flex
     align-items: flex-start
     font-family: m-fonts.$main
+    box-sizing: border-box
     font-size: 19px
     font-weight: normal
     font-style: normal
@@ -28,6 +30,18 @@
     color: #545454
     text-decoration: none
     margin: 0 69px 0 0
+    &:focus
+      color: #9e5fe4
+    &:hover
+      color: #9e5fe4
+      cursor: pointer
+    &:active
+      color: #545454
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+      border: none
     &:last-child
       margin: 0
   &_marker

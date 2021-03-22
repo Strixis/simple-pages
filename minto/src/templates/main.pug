@@ -1,9 +1,9 @@
 include s-slider
+
 mixin slide(slide)
   .slide
     h2.slide_heading= slide.heading
     p.slide_text= slide.text
-
 
 -
   let slides = [
@@ -20,6 +20,61 @@ mixin slide(slide)
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae totam quia.',
     },
   ]
-+slider
-  each slide in slides
-    +slide(slide)
+
+section.welcome
+  +s-slider
+    each slide in slides
+      +slide(slide)
+  .welcome_text-content
+    p.welcome_text
+      span.accentuated__colorful Lorem ipsum dolor sit amet
+      |, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+      | magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+      | consequat.
+
+article.article
+  img.article_img(src=require('img/circle.jpg'), alt="photo")
+  .article_content
+    h2.article_heading Lorem ipsum dolor sit amet
+    p.article_text
+      | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem 
+      | aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+      | Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni 
+      | dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit 
+      | amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam 
+      | aliquam quaerat voluptatem. 
+    a.article_link(href="#") Read more
+
+-
+  let partners = [
+    {
+      link: '#',
+      img: require('img/aboutcom.png'),
+      imgalt: 'aboutcom',
+    },
+    {
+      link: '#',
+      img: require('img/mashable.png'),
+      imgalt: 'mashable',
+    },
+    {
+      link: '#',
+      img: require('img/techcrunch.png'),
+      imgalt: 'techcrunch',
+    },
+    {
+      link: '#',
+      img: require('img/businessweek.png'),
+      imgalt: 'businessweek',
+    },
+  ]
+
+section.partners
+  h3.partners_heading
+    span.accentuated Where
+    span.partners_text We Have Been Featured
+    span.dotted-line
+  .partners_links
+    each partner in partners
+      a.partners_link(href= partner.link)
+        img.partners_img(src= partner.img, alt= partner.imgalt) 

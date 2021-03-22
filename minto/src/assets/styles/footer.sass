@@ -1,0 +1,51 @@
+@use './m-fonts'
+@use './m-variables'
+
+.footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: m-variables.$padding
+  height: 78px
+  background: #e7e7e7 url('~img/bgfooter.jpg')
+  background-size: contain
+  box-sizing: border-box
+
+.copyright
+  font-family: m-fonts.$main
+  font-size: 15px
+  font-weight: 300
+  font-stretch: normal
+  font-style: normal
+  letter-spacing: normal
+  text-align: center
+  color: #454242
+  margin: 0
+
+.socials
+  display: flex
+  &_link
+    background: #82699d
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 30px
+    width: 30px
+    color: #e7e7e7
+    margin: 0 22px 0 0
+    text-decoration: none
+    &:focus
+      background: #9e5fe4
+    &:hover
+      background: #9e5fe4
+      cursor: pointer
+    &:active
+      background: #82699d
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+      border: none
+  &:last-child
+    margin: 0

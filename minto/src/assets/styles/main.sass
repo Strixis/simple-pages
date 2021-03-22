@@ -4,3 +4,186 @@
 .main
   padding: m-variables.$padding
   box-sizing: border-box
+
+.welcome
+  &_text-content
+    padding: 19px 39px
+    box-sizing: border-box
+    margin: 40px 0 0 0
+    border-top: 1px solid rgba(73, 72, 72, 0.7)
+    border-bottom: 1px solid rgba(73, 72, 72, 0.7)
+    text-align: center
+  &_text
+    display: block
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: m-fonts.$main
+    font-size: 23px
+    font-weight: normal
+    font-stretch: normal
+    font-style: italic
+    line-height: 1.57
+    color: #494848
+
+.accentuated
+  font-weight: bold
+  &__colorful
+    color: #82699d
+
+.article
+  display: flex
+  padding: 31px 13px 55px
+  box-sizing: border-box
+  &_img
+    display: block
+    align-self: flex-start
+    background: #82699d
+    min-height: 310px
+    margin: 0 39px 0 0
+  &_content
+    display: flex
+    flex-direction: column
+    padding: 49px 0 0 0
+    box-sizing: border-box
+  &_heading
+    display: block
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: m-fonts.$main
+    font-size: 31px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.16
+    letter-spacing: normal
+    color: #505051
+  &_text
+    display: block
+    margin: 27px 0 0 0
+    padding: 0
+    box-sizing: border-box
+    font-family: m-fonts.$main
+    font-size: 15px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.87
+    letter-spacing: normal
+    color: #838383
+  &_link
+    $arrow-color: #82699d
+    display: block
+    align-self: flex-end
+    margin: 15px 0 0 0
+    padding: 0
+    box-sizing: border-box
+    font-family: m-fonts.$main
+    font-size: 13px
+    font-weight: normal
+    font-stretch: normal
+    font-style: italic
+    line-height: 2.77
+    letter-spacing: normal
+    color: #82699d
+    position: relative
+    text-decoration: none
+    &::after,
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 16px
+      right: -20px
+    &::before
+      border: 2px solid $arrow-color
+      width: 9px
+    &::after
+      border-left: 9px solid $arrow-color
+      border-top: 4px solid transparent
+      border-bottom: 4px solid transparent
+      right: -25px
+      top: 14px
+    &:focus
+      color: #9e5fe4
+      &::after,
+      &::before
+        border-left-color: #9e5fe4
+    &:hover
+      color: #9e5fe4
+      cursor: pointer
+      &::after,
+      &::before
+        border-left-color: #9e5fe4
+    &:active
+      color: #82699d
+      &::after,
+      &::before
+        border-left-color: $arrow-color
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+      border: none
+
+.partners
+  margin: 0 0 71px 0
+  &_heading
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: m-fonts.$main
+    font-size: 23px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.57
+    letter-spacing: normal
+    text-align: center
+    color: #000000
+  &_text
+    flex-shrink: 0
+  &_links
+    display: flex
+  &_link
+    display: flex
+    height: 71px
+    justify-content: center
+    align-items: center
+    width: 100%
+    box-sizing: border-box
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    background: #f7f7f7
+    margin: 44px 0 0 0
+    &:focus
+      background: #e7e7e7
+    &:hover
+      background: #e7e7e7
+      cursor: pointer
+    &:active
+      background: #f7f7f7
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+      border: 1px solid rgba(0, 0, 0, 0.1)
+
+.dotted-line
+  display: block
+  width: 100%
+  border-top: 1px dotted black
+  height: 3px
+  border-bottom: 1px dotted black
+  margin: 0 0 0 6px
+  position: relative
+  opacity: 0.5
+  &::after
+    content: ""
+    display: block
+    width: 100%
+    border-top: 1px dotted black
+    position: absolute
+    top: 1px
